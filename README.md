@@ -7,9 +7,11 @@ npm i lazy-select -S
 ```
 ##### 全局引入
 ```html
+<script>
 import lazySelect from 'lazy-select'
 
 Vue.use(lazySelect)
+</script>
 ```
 
 #### 普通引入
