@@ -6,7 +6,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Element, {
   size: 'small',
 })
-Vue.component('lazy-select', lazySelect)
+// Vue.component('lazy-select', lazySelect)
+Vue.use(lazySelect)
 Vue.config.productionTip = false
 
 new Vue({

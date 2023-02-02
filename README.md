@@ -2,12 +2,24 @@
 
 由于element-ui组件的级联选择器采用懒加载方案回显特别复杂，所以自行二次封装了懒加载的级联选择器组件
 ### 安装
-` npm i lazy-select -S `
+```html
+npm i lazy-select -S
+```
+##### 全局引入
 ```html
 import lazySelect from 'lazy-select'
 
 Vue.use(lazySelect)
 
+普通引入
+<script>
+import lazySelect from 'lazy-select'
+export default {
+  components: {
+    lazySelect
+  }
+}
+</script>
 ```
 ### 基本用法
 
