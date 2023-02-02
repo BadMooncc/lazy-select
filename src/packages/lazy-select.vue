@@ -1,7 +1,7 @@
 <template>
   <div class="lazy-select">
     <el-select
-      :value-key="props.value"
+      :value-key="nodeKey"
       @remove-tag="handleRemove"
       :collapse-tags="collapseTags"
       multiple
@@ -14,6 +14,7 @@
           ref="tree"
           style="padding: 5px 0;"
           :node-key="nodeKey"
+          :accordion="accordion"
           :indent="indent"
           :empty-text="emptyText"
           :checkStrictly="true"
@@ -36,7 +37,7 @@
       <el-option
         style="display: none"
         v-for="item in value"
-        :key="item[props.value]"
+        :key="item[nodeKey]"
         :value="item"
         :label="item[props.label]"
       />
@@ -68,6 +69,10 @@ export default {
       default: 16
     },
     emptyText: String,
+    accordion: {
+      type: Boolean,
+      default: false
+    },
     nodeKey: {
       type: String,
       default: 'id'
@@ -91,7 +96,7 @@ export default {
   },
   computed: {
     defaultChecked() {
-      return this.value_.map(item => item[this.props.value])
+      return this.value_.map(item => item[this.nodeKey])
     }
   },
   data() {
@@ -109,7 +114,7 @@ export default {
     },
     handleRemove() {
       this.type = 'remove'
-      this.$refs.tree.setCheckedKeys(this.value_.map(item => item[this.props.value]))
+      this.$refs.tree.setCheckedKeys(this.value_.map(item => item[this.nodeKey]))
       this.$emit('input', this.value_)
     },
     handleCheckChange(val, checked) {
@@ -117,7 +122,7 @@ export default {
       if (!this.multiple) {
         if (checked) {
           this.value_ = [ val ]
-          this.$refs.tree.setCheckedKeys([ this.value_[0][this.props.value] ])
+          this.$refs.tree.setCheckedKeys([ this.value_[0][this.nodeKey] ])
         } else if (!checked && !this.$refs.tree.getCheckedNodes().length) {
           this.$refs.tree.setCheckedKeys([])
           this.value_ = []
@@ -133,7 +138,7 @@ export default {
       } else if (!checked && this.type !== 'remove') {
         let currencIndex = ''
         this.value_.forEach((item, index) => {
-          if (item[this.props.value] === val[this.props.value]) currencIndex = index
+          if (item[this.nodeKey] === val[this.nodeKey]) currencIndex = index
         })
         this.value_.splice(currencIndex, 1)
       }

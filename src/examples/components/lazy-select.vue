@@ -1,8 +1,7 @@
 <template>
   <lazy-select
     :props="{
-      label: 'deptName',
-      value: 'id'
+      label: 'deptName'
     }"
     :loading="loading"
     lazy
@@ -34,6 +33,3 @@ export default {
   }
 }
 </script>
-<style>
-
-</style>
