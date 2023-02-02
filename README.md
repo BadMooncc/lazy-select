@@ -34,8 +34,7 @@ export default {
 <template>
   <lazy-select
     :props="{
-      label: 'deptName',
-      value: 'id'
+      label: 'deptName'
     }"
     lazy
     node-key="id"
