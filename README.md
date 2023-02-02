@@ -2,7 +2,7 @@
 
 由于element-ui组件的级联选择器采用懒加载方案回显特别复杂，所以自行二次封装了懒加载的级联选择器组件
 
-
+![image](https://github.com/BadMooncc/lazy-select/blob/main/public/demo.gif)
 
 ### 安装
 ```html
