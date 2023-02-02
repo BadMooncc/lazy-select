@@ -2,7 +2,7 @@
 
 由于element-ui组件的级联选择器采用懒加载方案回显特别复杂，所以自行二次封装了懒加载的级联选择器组件
 
-[video(video-sAPZIsBJ-1675315999859)(type-csdn)(url-https://live.csdn.net/v/embed/273013)(image-https://video-community.csdnimg.cn/vod-84deb4/395705c0a2b871edb74b0764a0fd0102/snapshots/bd3c1ab4c2254528bbc6a92dc2e7aaea-00002.jpg?auth_key=4828914769-0-0-edf7b91bfb36632971fe6ff444fd1013)(title-屏幕录制2023-02-02 13.09.49)]
+
 
 ### 安装
 ```html
