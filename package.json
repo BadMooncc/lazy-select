@@ -2,10 +2,12 @@
   "name": "lazy-select",
   "version": "0.1.0",
   "private": true,
+  "main": "lib/lazy-select.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "package": "vue-cli-service build --target lib --name lazy-select --dest lib src/packages/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",

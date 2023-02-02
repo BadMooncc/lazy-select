@@ -1,10 +1,16 @@
 ## lazy-select懒加载选择器组件
 
 由于element-ui组件的级联选择器采用懒加载方案回显特别复杂，所以自行二次封装了懒加载的级联选择器组件
+### 安装
+` npm i lazy-select -S `
+```html
+import lazySelect from 'lazy-select'
 
+Vue.use(lazySelect)
+
+```
 ### 基本用法
 
-:::demo 
 ```html
 <template>
   <lazy-select
@@ -42,7 +48,6 @@ export default {
 }
 </script>
 ```
-:::
 
 ### Attributes
 | 参数                  | 说明                                               | 类型                        | 可选值  | 默认值   |

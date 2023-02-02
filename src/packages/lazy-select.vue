@@ -148,8 +148,3 @@ export default {
   }
 }
 </script>
-<style>
-.lazy-select .el-select-dropdown__item {
-  height: auto;
-}
-</style>

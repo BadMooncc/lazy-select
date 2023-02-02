@@ -1,6 +1,6 @@
 import lazySelect from './lazy-select.vue'
 
-lazySelect.prototype._version = '1.0.0'
+// lazySelect.prototype._version = '1.0.0'
 
 
 

@@ -3,7 +3,6 @@
     :props="{
       label: 'deptName'
     }"
-    :loading="loading"
     lazy
     node-key="id"
     :load="lazyLoad"
