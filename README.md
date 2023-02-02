@@ -10,7 +10,8 @@ npm i lazy-select -S
 import lazySelect from 'lazy-select'
 
 Vue.use(lazySelect)
-
+```
+```html
 普通引入
 <script>
 import lazySelect from 'lazy-select'
