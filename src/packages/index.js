@@ -5,7 +5,7 @@ const install = (_vue) => {
   _vue.component('lazy-select', lazySelect);
 };
 
-lazySelect._version = '1.0.0'
+lazySelect._version = '1.0.3'
 lazySelect.install = install
 
 export default lazySelect
