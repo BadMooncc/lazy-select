@@ -11,8 +11,9 @@ import lazySelect from 'lazy-select'
 
 Vue.use(lazySelect)
 ```
+
+#### 普通引入
 ```html
-普通引入
 <script>
 import lazySelect from 'lazy-select'
 export default {
